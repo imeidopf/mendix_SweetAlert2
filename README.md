@@ -1,8 +1,6 @@
 # SweetAlert2 Module for Mendix
 
 ## Getting Started
-_NOTE: It is recommended that you use a minimum of Mendix 8.2, as you may run into further limitations from not being able to call Microflows from Nanoflows._
-
 _NOTE: The basic modal and toast will not require any additional setup. The modals for user input and countdown/timer will require alterations to fit your needs._
 
 ## Configuration
@@ -19,10 +17,16 @@ _NOTE: The basic modal and toast will not require any additional setup. The moda
 
 ## Limitations
 - Is not currently plug-and-play, will require the steps below
-- Real-time alerts are not possible without extra javascripting or use of something like the microflow timer widget.
+- Real-time alerts are not possible without extra code or use of something like the microflow timer widget.
 
 ## Additional Required Configuration
 - Locate the ‘vendor’ folder in the following directory: C:\PATH\TO\MENDIX\PROJECT\\javascriptsource\sweetalert2
 - Copy the ‘vendor’ folder into the projects theme folder
-- Reference the contents of the ‘vendor’ folder into the index.html file
+- Reference the contents of the ‘vendor’ folder into the head element of the index.html file in your theme folder.
+-  **_If you do not have an index.html file in your theme folder, you should be able to find one in the deployment/web folder, after running your project at least once._**
+- Use this code:
+```
+<script type="text/javascript" src="vendor/SweetAlert2/sweetalert2.all.min.js"></script>
+<link rel="stylesheet" src="vendor/SweetAlert2/sweetalert2.min.css" />
+```
 - Re-run the application
