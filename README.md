@@ -2,6 +2,9 @@
 
 ## Getting Started
 _NOTE: It is recommended that you use a minimum of Mendix 8.2, as you may run into further limitations from not being able to call Microflows from Nanoflows._
+
+_NOTE: The basic modal and toast will not require any additional setup. The modals for user input and countdown/timer will require alterations to fit your needs._
+
 ## Configuration
 - Download the module and give all users the User role so they can access the content.
 - Give your button(s)/link(s) the ‘Call a Nanoflow’ action, using the JavaScript actions directly or use the nanoflows starting with **SUB_**
